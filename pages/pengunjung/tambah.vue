@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
-        <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
+        <h2 class="text-center my-4">ISI FROM KUNJUNGAN</h2>
         <form>
           <div class="mb-3">
             <input type="text" class="form-control form-control-lg rounded-5" placeholder="NAMA...">
@@ -55,10 +55,27 @@
               <option value="Kembalikan">Kembalikan Buku</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">KIRIM</button>
-          <nuxt-link to="/pengunjung"></nuxt-link>
+          
+          <nuxt-link to="../"><button type="submit" class="btn btn-dark btn-lg rounded-5 px-5">KIRIM</button></nuxt-link>
         </form>
       </div>
     </div>
   </div>
 </template>
+<style scoped>
+.container-fluid {
+  background-image:"";
+  width: 100%;
+  height: 700px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.btn {
+  background: #000000;
+  font-style: italic;
+}
+</style>
