@@ -10,6 +10,7 @@
       </div>
       <div class="col-4">
         <div class="buku">
+          <h2>Detail buku</h2>
         <p>Penulis : Sejarah</p>
         <p>Tahun terbit : 2017</p>
         <p>Penerbit : Kemendikbud</p>
