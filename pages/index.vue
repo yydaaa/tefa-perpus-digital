@@ -1,65 +1,74 @@
 <template>
-  <div class="container-fluid">
-    <div class="row my-5 justify-content-around">
-      <div class="col-lg-5">
-        <nuxt-link to="/pengunjung/tambah">
-          <div class="card bg-pengunjung rounded-5">
-            <div class="card-body">
-              <h2 style="font-family: ">Pengunjung</h2>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row py-5 justify-content-around">
+        <div class="col-lg-5">
+          <nuxt-link to="/pengunjung/tambah" class="text-decoration-none">
+            <div class="card bg-pengunjung rounded-5">
+              <div class="card-body">
+                <h2 class="text-center text-light" style="margin-top: 80px;">Pengunjung</h2>
+              </div>
             </div>
-          </div>
-        </nuxt-link>
-      </div>
-      <div class="col-lg-5">
-        <nuxt-link to="/buku">
-          <div class="card bg-buku rounded-5">
-            <div class="card-body">
-              <h2 style="font-family:">Pencarian Buku</h2>
-            </div>
-          </div>
-        </nuxt-link>
-      </div>
-      <div class="col-lg-12">
-        <h2 class="text-center my-4">RIWAYAT PENGUNJUNG</h2>
-        <div class="my-3">
-          <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
+          </nuxt-link>
         </div>
-        <div class="my-3 text-muted">menampilkan 1 dari 1</div>
-        <table class="table">
-          <thead>
-            <tr>
-              <td>NO</td>
-              <td>NAMA</td>
-              <td>KEANGGOTAAN</td>
-              <td>TINGKAT</td>
-              <td>JURUSAN</td>
-              <td>KELAS</td>
-              <td>KEPERLUAN</td>
-              <td>WAKTU</td>
+        <div class="col-lg-5">
+          <nuxt-link to="/buku" class="text-decoration-none">
+            <div class="card bg-buku rounded-5">
+              <div class="card-body">
+                <h2 class="text-center text-light"  style="margin-top: 80px;">Pencarian Buku</h2>
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
+        <div class="col-lg-12">
+          <h2 class="text-center my-4">RIWAYAT PENGUNJUNG</h2>
+          <div class="my-3">
+            <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
+          </div>
+          <div class="my-3 text-muted">menampilkan 1 dari 1</div>
+          <table class="table">
+            <thead>
+              <tr>
+                <td>NO</td>
+                <td>NAMA</td>
+                <td>KEANGGOTAAN</td>
+                <td>TINGKAT</td>
+                <td>JURUSAN</td>
+                <td>KELAS</td>
+                <td>KEPERLUAN</td>
+                <td>WAKTU</td>
 
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1.</td>
-              <td>YUDA APRIANA SALAM</td>
-              <td>Siswa</td>
-              <td>XI</td>
-              <td>PPLG</td>
-              <td>3</td>
-              <td>MEMBACA</td>
-              <td>26 Februari 2024, 13:00</td>
-              
-            </tr>
-          </tbody>
-        </table>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>YUDA APRIANA SALAM</td>
+                <td>Siswa</td>
+                <td>XI</td>
+                <td>PPLG</td>
+                <td>3</td>
+                <td>MEMBACA</td>
+                <td>26 Februari 2024, 13:00</td>
+                
+              </tr>
+            </tbody>
+          </table>
 
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+
 <style scoped>
+.content{
+  background-color: rgba(67, 199, 255, 43%);
+  width: 100%;
+  height: 100vh;
+  
+}
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;
@@ -85,7 +94,7 @@
   background-size: cover;
   opacity: 60%;
 }
-.card.bg-spengunjung {
+/* .card.bg-spengunjung {
   background-color: #ECEE7F;
   background-repeat: no-repeat;
   background-position: center center;
@@ -105,5 +114,5 @@
   background-position: center center;
   background-size: cover;
   opacity: 60%;
-}
+} */
 </style>
