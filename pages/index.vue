@@ -26,7 +26,7 @@
             <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
           </div>
           <div class="my-3 text-muted">menampilkan 1 dari 1</div>
-          <table class="table">
+          <table class="table table-striped border-dark">
             <thead>
               <tr>
                 <td>NO</td>
@@ -36,31 +36,45 @@
                 <td>JURUSAN</td>
                 <td>KELAS</td>
                 <td>KEPERLUAN</td>
+                <td>TANGGAL</td>
                 <td>WAKTU</td>
-
               </tr>
             </thead>
+
             <tbody>
-              <tr>
-                <td>1.</td>
-                <td>YUDA APRIANA SALAM</td>
-                <td>Siswa</td>
-                <td>XI</td>
-                <td>PPLG</td>
-                <td>3</td>
-                <td>MEMBACA</td>
-                <td>26 Februari 2024, 13:00</td>
-                
+              <tr v-for="(visitors,i) in visitors" :key="i">
+                <td>{{ i+1 }}.</td>
+                <td>{{ visitors.nama }}</td>
+                <td>{{ visitors.keanggotaan.nama }}</td>
+                <td>{{ visitors.tingkat}}</td>
+                <td>{{ visitors.jurusan }}</td>
+                <td>{{ visitors.kelas }}</td>
+                <td>{{ visitors.keperluan.nama }}</td>
+                <td>{{ visitors.tanggal }}</td>
+                <td>{{ visitors.waktu.split(".")[0] }} </td>
               </tr>
             </tbody>
+            
           </table>
-
         </div>
       </div>
     </div>
   </div>
 </template>
+<script setup>
+const supabase= useSupabaseClient()
 
+const visitors = ref([])
+
+const getPengunjung =async () => {
+  const { data, error } = await supabase.from('pengunjung').select(`*, keanggotaan(*), keperluan(*)`)
+  if(data) visitors.value = data
+}
+onMounted(() =>{
+  getPengunjung()
+})
+
+</script>
 
 <style scoped>
 .content{

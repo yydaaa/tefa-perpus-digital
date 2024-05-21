@@ -8,7 +8,7 @@
           </p>
           </h1>
           <input type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini?">
-        <div class="my-3 text-muted">menampilkan 4 dari 4</div>
+        <div class="my-3 text-muted">menampilkan 2 dari 2</div>
         <div class="row">
           <div class="col-lg-2">
             <div class="card mb-3">
