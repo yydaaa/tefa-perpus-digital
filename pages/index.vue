@@ -23,7 +23,9 @@
         <div class="col-lg-12">
           <h2 class="text-center my-4">RIWAYAT PENGUNJUNG</h2>
           <div class="my-3">
-            <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
+            <form @submit.prevent="getPengunjung">
+              <input v-model="keyword" type="search" class="form-control form-control-lg rounded-5" placeholder="Cari..." @input="getPengunjung" />
+            </form>
           </div>
           <div class="my-3 text-muted">menampilkan 1 dari 1</div>
           <table class="table table-striped border-dark">
@@ -64,10 +66,14 @@
 <script setup>
 const supabase= useSupabaseClient()
 
+const keyword = ref('')
 const visitors = ref([])
 
 const getPengunjung =async () => {
-  const { data, error } = await supabase.from('pengunjung').select(`*, keanggotaan(*), keperluan(*)`)
+  const { data, error } = await supabase
+  .from('pengunjung')
+  .select(`*, keanggotaan(*), keperluan(*)`)
+  .ilike("nama",`%${keyword.value}%`)
   if(data) visitors.value = data
 }
 onMounted(() =>{

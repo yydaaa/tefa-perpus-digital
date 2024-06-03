@@ -57,11 +57,11 @@
               </select>
             </div>
 
-            <div class="mb-2" v-if="form.keperluan == '4'">
+            <!-- <div class="mb-2" v-if="form.keperluan == '4'">
               <div class="mb-3">
                 <input type="text" class="form-control  " placeholder="Isi disini">
               </div>
-            </div>
+            </div> -->
 
             <button type="submit" class="btn rounded-5 px-5" value="submit">SUBMIT</button>
 
@@ -116,7 +116,7 @@ onMounted(() => {
 .container-fluid {
   background-color: rgba(67, 199, 255, 43%); 
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
