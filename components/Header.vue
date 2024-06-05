@@ -1,10 +1,10 @@
 <template>
   <div class="row p-3 bg text-white m-0">
-    <div class="col-lg-1">
+    <div class="col-lg-1 col-md-2 col-4">
       <img src="~/assets/img/logo.png" alt="logo SMKN 4">
     </div>
 
-    <div class="col-lg-11">
+    <div class="col-lg-11 col-md-10 col-8">
       <h1>Perpus Digital</h1>
       <div>SMKN 4 Tasikmalaya</div>
       <address>
