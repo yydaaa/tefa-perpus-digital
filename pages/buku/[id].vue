@@ -22,7 +22,7 @@
                   </div>
               </div>
               <div class="row mt-2">
-                  <h3 class="list-group-item m-5">SINOPSIS: {{ buku.deskripsi }}</h3>
+                  <h4 class="list-group-item m-5">SINOPSIS: <p>{{ buku.deskripsi }}</p></h4>
               <div class="my-3">
             <nuxt-link to="/buku"><button type="submit" class="btn rounded-5 px-5" style="margin-left: 0%;">KEMBALI</button></nuxt-link>
         </div>
@@ -64,6 +64,7 @@ onMounted(() => {
 <style scoped>
 .container-fluid{
   background-color: rgba(67, 199, 255, 43%); 
+  /* background-image: linear-gradient(#4bbaff,#ffffff); */
   width: 100%;
   height: 100vh;
   object-position: 0 30;

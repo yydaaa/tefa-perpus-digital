@@ -28,36 +28,39 @@
             </form>
           </div>
           <div class="my-3 text-muted">menampilkan 1 dari 1</div>
-          <table class="table table-striped border-dark">
-            <thead>
-              <tr>
-                <td>NO</td>
-                <td>NAMA</td>
-                <td>KEANGGOTAAN</td>
-                <td>TINGKAT</td>
-                <td>JURUSAN</td>
-                <td>KELAS</td>
-                <td>KEPERLUAN</td>
-                <td>TANGGAL</td>
-                <td>WAKTU</td>
-              </tr>
-            </thead>
+          <div class="table-responsive">
 
-            <tbody>
-              <tr v-for="(visitors,i) in visitors" :key="i">
-                <td>{{ i+1 }}.</td>
-                <td>{{ visitors.nama }}</td>
-                <td>{{ visitors.keanggotaan.nama }}</td>
-                <td>{{ visitors.tingkat}}</td>
-                <td>{{ visitors.jurusan }}</td>
-                <td>{{ visitors.kelas }}</td>
-                <td>{{ visitors.keperluan.nama }}</td>
-                <td>{{ visitors.tanggal }}</td>
-                <td>{{ visitors.waktu.split(".")[0] }} </td>
-              </tr>
-            </tbody>
+            <table class="table table-striped border-dark">
+              <thead>
+                <tr>
+                  <td>NO</td>
+                  <td>NAMA</td>
+                  <td>KEANGGOTAAN</td>
+                  <td>TINGKAT</td>
+                  <td>JURUSAN</td>
+                  <td>KELAS</td>
+                  <td>KEPERLUAN</td>
+                  <td>TANGGAL</td>
+                  <td>WAKTU</td>
+                </tr>
+              </thead>
+  
+              <tbody>
+                <tr v-for="(visitors,i) in visitors" :key="i">
+                  <td>{{ i+1 }}.</td>
+                  <td>{{ visitors.nama }}</td>
+                  <td>{{ visitors.keanggotaan.nama }}</td>
+                  <td>{{ visitors.tingkat}}</td>
+                  <td>{{ visitors.jurusan }}</td>
+                  <td>{{ visitors.kelas }}</td>
+                  <td>{{ visitors.keperluan.nama }}</td>
+                  <td>{{ visitors.tanggal }}</td>
+                  <td>{{ visitors.waktu.split(".")[0] }} </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
             
-          </table>
         </div>
       </div>
     </div>
@@ -86,7 +89,7 @@ onMounted(() =>{
 .content{
   background-color: rgba(67, 199, 255, 43%);
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   
 }
 .card {
