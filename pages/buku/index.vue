@@ -9,9 +9,11 @@
                 <input v-model="keyword" type="search" class="form-control from-control-lg rounded-2" placeholder="Cari..." aria-label="Search" @input="getbooks" />
               </div>
             </form>
+            
             <div class="row">
-              <div class="col-lg-2 col-5">menampilkan {{ books.length }} buku dari {{ books.length }}</div>
-  
+              <div class="col-lg-2 col-5">menampilkan {{ books.length }} buku dari {{ books.length }}
+              </div>
+
               <div class="col-lg-10 col-7">
                 <div class="row float-end">
                   <div class="col-4 col-3 pt-2 text-end">Kategori:</div>

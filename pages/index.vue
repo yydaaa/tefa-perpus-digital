@@ -27,7 +27,11 @@
               <input v-model="keyword" type="search" class="form-control form-control-lg rounded-5" placeholder="Cari..." @input="getPengunjung" />
             </form>
           </div>
-          <div class="my-3 text-muted">menampilkan 1 dari 1</div>
+
+          <div class="row">
+              <div class="col-lg-2 col-5">menampilkan {{ visitors.length }} dari {{ visitors.length }}
+              </div>
+
           <div class="table-responsive">
 
             <table class="table table-striped border-dark">
@@ -63,6 +67,7 @@
             
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
