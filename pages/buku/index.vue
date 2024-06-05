@@ -60,6 +60,7 @@ const getbooks = async () => {
   .order('id')
   if(data) books.value = data
 }
+
 const getKategori = async () => {
     const { data, error } = await supabase
     .from('kategori_buku')
@@ -74,7 +75,7 @@ const bookFiltered = computed (() => {
             b.kategori?.nama.toLowerCase().includes(keyword.value?.toLowerCase())
         )
     })
-}) 
+})
 
 onMounted(() =>{
   getbooks()
