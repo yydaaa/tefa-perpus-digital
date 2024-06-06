@@ -22,7 +22,7 @@
                   </div>
               </div>
               <div class="row mt-2">
-                  <h4 class="list-group-item m-5">SINOPSIS: <p>{{ buku.deskripsi }}</p></h4>
+                  <h4 class="list-group-item">DESKRIPSI: <p>{{ buku.deskripsi }}</p></h4>
               <div class="my-3">
             <nuxt-link to="/buku"><button type="submit" class="btn rounded-5 px-5" style="margin-left: 0%;">KEMBALI</button></nuxt-link>
         </div>
@@ -72,7 +72,7 @@ onMounted(() => {
 .btn{
   background: #ffffff;
   color:rgb(0, 0, 0);
-  margin: 10px 90%;
+/*   margin: 10px 90%; */
   border-radius: 50%;
   margin-left: 0%
   
