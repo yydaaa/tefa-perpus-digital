@@ -11,7 +11,7 @@
             </form>
             
             <div class="row">
-              <div class="col-lg-2 col-5">menampilkan {{ books.length }} buku dari {{ books.length }}
+              <div class="col-lg-2 col-5">menampilkan {{ books.length }} buku dari {{ jmlhBuku }}
               </div>
 
               <div class="col-lg-10 col-7">
@@ -53,6 +53,7 @@ const supabase= useSupabaseClient ()
 const keyword = ref('')
 const books = ref([])
 const kategories = ref ([])
+const jmlhBuku = ref(0)
 
 const getbooks = async () => {
   const { data ,error } = await supabase
@@ -79,9 +80,16 @@ const bookFiltered = computed (() => {
     })
 })
 
+const getJmlhBuku = async() =>{
+  const { data , count } = await supabase
+  .from("buku")
+  .select('*', { count: "exact"})
+  if(data) jmlhBuku.value = count
+}
 onMounted(() =>{
   getbooks()
   getKategori()
+  getJmlhBuku()
 })
 
 </script>

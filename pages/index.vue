@@ -29,7 +29,7 @@
           </div>
 
           <div class="row">
-              <div class="col-lg-2 col-5">menampilkan {{ visitors.length }} dari {{ visitors.length }}
+              <div class="col-lg-2 col-5">menampilkan {{ visitors.length }} dari {{ jmlhpengunjung }}
               </div>
 
           <div class="table-responsive">
@@ -76,6 +76,7 @@ const supabase= useSupabaseClient()
 
 const keyword = ref('')
 const visitors = ref([])
+const jmlhpengunjung = ref(0)
 
 const getPengunjung =async () => {
   const { data, error } = await supabase
@@ -84,8 +85,15 @@ const getPengunjung =async () => {
   .ilike("nama",`%${keyword.value}%`)
   if(data) visitors.value = data
 }
+const getJmlhPengunjung= async() =>{
+  const { data , count } = await supabase
+  .from("pengunjung")
+  .select('*', { count: "exact"})
+  if(data) jmlhpengunjung.value = count
+}
 onMounted(() =>{
   getPengunjung()
+  getJmlhPengunjung()
 })
 
 </script>
