@@ -8,7 +8,7 @@
       <h1>Perpus Digital</h1>
       <div>SMKN 4 Tasikmalaya</div>
       <address>
-        jl.Depok, Sukamenak, Purbaratu
+        Jln.Depok, Sukamenak, Purbaratu
       </address>
     </div>  
   </div>
