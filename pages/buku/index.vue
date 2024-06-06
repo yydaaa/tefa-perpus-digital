@@ -42,7 +42,7 @@
                   </div>
               </div>
               <div class="">
-                <nuxt-link to="/"><button type="submit" class="btn rounded-5">KEMBALI</button></nuxt-link>
+                <nuxt-link to="/"><button type="submit" class="btn rounded-5 px-5">KEMBALI</button></nuxt-link>
               </div>
           </div>
     </div>
