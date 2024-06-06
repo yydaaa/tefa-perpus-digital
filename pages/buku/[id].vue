@@ -1,16 +1,16 @@
 <template>
   <div class="content">
       <div class="container-fluid">
-          <div class="row d-flex justify-content-center flex-md-wrap" style="padding-top: 190px;">
-              <div class="col-3 ">
+          <div class="row d-flex justify-content-center" style="padding-top: 190px;">
+              <div class="col-lg-4 col-md-5 col-sm-8 col-9">
                 <div class="cover " style="width:250px">
-                  <img :src="buku.cover"  class="cover row img-fluid" alt="cover buku" >
+                  <img :src="buku.cover"  class="cover img-fluid" alt="cover buku" >
                   <div class="row">
                   </div>
                 </div>
               </div>
-              <div class="col-8">
-                  <div class="row">
+              <div class="col-8 col-md-4 col-sm-5 col-4">
+                  <div class="row mt-4">
                           <h3 class="list-group-item">JUDUL: {{ buku.judul }}</h3>
                           <h3 class="list-group-item">PENULIS: {{ buku.penulis }}</h3>
                           <h3 class="list-group-item">PENERBIT: {{ buku.penerbit }}</h3>
@@ -21,8 +21,8 @@
                   
                   </div>
               </div>
-              <div class="row mt-2">
-                  <h4 class="list-group-item">DESKRIPSI: <p>{{ buku.deskripsi }}</p></h4>
+              <div class="row col-">
+                  <h3 class="list-group-item">DESKRIPSI:</h3> <h4><p>{{ buku.deskripsi }}</p></h4>
               <div class="my-3">
             <nuxt-link to="/buku"><button type="submit" class="btn rounded-5 px-5" style="margin-left: 0%;">KEMBALI</button></nuxt-link>
         </div>
@@ -66,13 +66,13 @@ onMounted(() => {
   background-color: rgba(67, 199, 255, 43%); 
   /* background-image: linear-gradient(#4bbaff,#ffffff); */
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   object-position: 0 30;
 }
 .btn{
   background: #ffffff;
   color:rgb(0, 0, 0);
-/*   margin: 10px 90%; */
+  /* margin: 10px 90%; */
   border-radius: 50%;
   margin-left: 0%
   
