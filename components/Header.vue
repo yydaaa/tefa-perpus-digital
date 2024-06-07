@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-lg-11 col-md-10 col-8">
-      <h1>Perpus Digital</h1>
+      <h1>PERPUSTAKAAN DIGITAL</h1>
       <div>SMKN 4 Tasikmalaya</div>
       <address>
         Jln.Depok, Sukamenak, Purbaratu
